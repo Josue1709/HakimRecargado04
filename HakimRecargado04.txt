@@ -1,1 +1,70 @@
-https://repl.it/@Josue1709/HakimRecargado04
+import java.util.Scanner;
+import java.util.Random;
+
+class Main {
+  public static void main(String[] args) {
+    String mensaje;
+    String user;
+    
+    Scanner teclado=new Scanner(System.in);
+    int num=1;
+    
+    user="Josué";
+    mensaje="Hakim>>\n\tJuguemos a las monedas";
+    mensaje=mensaje+"\n\tSi cae 1 será cara";
+    mensaje=mensaje+"\n\tSi cae 2 será cruz";
+    mensaje=mensaje+"\n\t¿Qué eliges?\n"+user+">>\n\t";
+    System.out.println(mensaje);
+    num=teclado.nextInt();
+  
+  
+    Random Ale=new Random() ;
+    int numAle;
+    int nCasos=2;
+    int inicio=1;
+    numAle=(int) (Ale.nextDouble()*nCasos+inicio);
+    System.out.printf("\tEl número es: %d", numAle);
+
+   if(numAle==1){
+     System.out.println("\n\tO sea cara");
+     if(num==1){
+       System.out.println("\n\tTu ganas!");
+     }
+     else{
+       System.out.println("\n\tYo gano!");
+     }
+   }
+   else{
+     System.out.println("\n\tO sea cruz");
+     if(num==2){
+       System.out.println("\n\tTu ganas!");
+     }
+     else{
+       System.out.println("\n\tYo gano!");
+     }
+   }
+   
+   int num2;
+
+   mensaje="Hakim>>\n\tAhora juguemos a los dados";
+   mensaje=mensaje+"\n\tLanzaré un número aleatorio";
+   mensaje=mensaje+"\n\tEscoge un número y si es igual al que lance, tu ganas!";
+   mensaje=mensaje+"\n\t¿Qué eliges?\n"+user+">>\n\t";
+   System.out.println(mensaje);
+   num2=teclado.nextInt();
+
+   Random Ale2=new Random() ;
+    int numAle2;
+    int nCasos2=6;
+    int inicio2=1;
+    numAle2=(int) (Ale2.nextDouble()*nCasos2+inicio2);
+    System.out.printf("\tEl número es: %d", numAle2);
+
+    if(num2==numAle2){
+      System.out.println("\n\tTu ganas!");
+    }
+    else{
+      System.out.println("\n\tYo gano!");
+    }
+  }
+}
